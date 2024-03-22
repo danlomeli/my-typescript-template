@@ -1,15 +1,15 @@
 setup:
-    npm install
-    npm run build
+	npm install
+	npm run build
 
 build:
-    tsc
+	tsc
 
 test:
-    jest
+	jest
 
 lint:
-    eslint 'src/**/*.{ts,tsx}' --fix
+	eslint 'src/**/*.{ts,tsx}' --fix
 
 format:
-    prettier --write 'src/**/*.{ts,tsx,json}'
+	prettier --write 'src/**/*.{ts,tsx,json}'
