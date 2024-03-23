@@ -1,6 +1,11 @@
+PATH := ./node_modules/.bin:$(PATH)
+
 setup:
+	rm -rf .git
+	git init
 	npm install
 	npm run build
+	!xargs npm install -g < $(HOME)/playground/global-packages.txt
 
 build:
 	tsc

@@ -6,10 +6,15 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "test": "jest",
-    "start": "ts-node src/index.ts",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "start": "NODE_OPTIONS='--trace-deprecation' ts-node src/index.ts",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "lint": "eslint 'src/**/*.{ts,tsx}' --fix",
-    "format": "prettier --write 'src/**/*.{ts,tsx,json}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx,json}'",
+    "serve": "npm run build && serve dist",
+    "type-check": "tsc --noEmit",
+    "pre-commit": "npm run lint && npm run format"
   },
   "keywords": [],
   "author": "",
