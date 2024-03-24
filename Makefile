@@ -1,8 +1,10 @@
 PATH := ./node_modules/.bin:$(PATH)
 
-setup:
+init:
 	rm -rf .git
 	git init
+
+setup:
 	npm install
 	npm run build
 
