@@ -5,7 +5,6 @@ setup:
 	git init
 	npm install
 	npm run build
-	-xargs npm install -g < $(HOME)/playground/global-packages.txt
 
 build:
 	tsc
